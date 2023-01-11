@@ -21,6 +21,13 @@ class ContactInfoViewController: UIViewController {
         name.text = contact.name
         phoneNumber.text = contact.phoneNumber
         title = "Contact info"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
+    }
+    
+    @objc func editTapped() {
+        let pushedVC = UIViewController()
+        view.backgroundColor = .systemTeal
+        navigationController?.pushViewController(pushedVC, animated: true)
     }
     
     
